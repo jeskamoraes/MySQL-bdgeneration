@@ -73,3 +73,11 @@ SELECT * FROM tb_personagem WHERE poder_defesa BETWEEN 1000 AND 2000;
 SELECT * FROM tb_personagem WHERE nome LIKE "c%";
 SELECT nome, atributo, poder_ataque, poder_defesa, tb_classe.categoria FROM tb_personagem INNER JOIN tb_classe 
 ON tb_personagem.classe_id = tb_classe.id WHERE tb_classe.categoria = "Guerreiro";
+
+SELECT * FROM tb_produtos INNER JOIN tb_categorias ON tb_produtos.categoria_id = tb_categorias.id;
+
+SELECT * FROM tb_produtos INNER JOIN tb_usuarios ON tb_produtos.usuario_id = tb_usuarios.id;
+
+SELECT * FROM tb_produtos
+INNER JOIN tb_categorias ON tb_produtos.categoria_id = tb_categorias.id
+INNER JOIN tb_usuarios ON tb_produtos.usuario_id = tb_usuarios.id;
